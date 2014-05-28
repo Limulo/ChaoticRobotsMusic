@@ -47,22 +47,12 @@ In questa sezione è possibile regolare singolarmente i volumi di tutti gli stru
 ANALISI DEL FUNZIONAMENTO
 =========================
 
-Tutta la struttura del brano musicale di basa su un tempo BPM di circa 120 e sulla unità di tempo della biscroma (pari a 62 millisecondi). L'arrangiamento è fisso, gli stili si susseguono sempre allo stesso modo: 96 battute di musica + 8 battute di silenzio. Nelle successive versioni sarà' possibile implementare un controllo manuale sul tempo BPM (tap tempo) e modificare l'arrangiamento in modo che venga costruito in tempo reale.
+Tutta la struttura del brano musicale si basa su un tempo BPM di circa 120 e sulla unità di tempo della biscroma (pari a 62 millisecondi). L'arrangiamento è fisso: gli stili si susseguono sempre allo stesso modo per una durata complessiva di 96 battute di musica + 8 battute di silenzio. 
+Nelle successive versioni sarà' possibile implementare un controllo manuale sul tempo BPM (tap tempo) e modificare l'arrangiamento in modo che venga costruito in tempo reale.
+--
 Questa parte del programma e' visibile dalle sub-patch 'time-contol', 'mix-presets' e 'score-generator' dalla sezione MASTER.
 
-
-
-
-
-SELEZIONE DELL'ACCORDO
-la media aritmetica delle posizioni dei robots definisce in ogni istante una posizione intermedia che, spostandosi all'interno di 4 quadranti immaginari in cui è suddiviso lo spazio, definisce l'accordo musicale tra i 4 accordi disponibili (Do, Fa, Sol, Re minore);
-
-CHIMES1
-
-CHIMES2
-
-PROPH
-
-SINGER
-
-
+Tutti gli strumenti melodici/armonici, si intonano sulle note di un accordo. Questo accordo è scelto su base della media aritmetica delle posizioni dei robot selezionati. Gli accordi possibili sono 4: Do, Sol, Fa e Re minore.
+Lo spazio di gioco dei robot e' suddiviso virtualmente in 4 riquadri. La posizione media, muovendosi tra un riquadro e l'altro seleziona l'accordo corrispondente. L'accordo cambia in relazione alla posizione media ma viene inviato a tutti gli strumenti solo in corrispondenza del tempo forte della battuta (ogni 8 crome) in modo che il cambiamento armonico avvenga sempre 'a tempo' con l'esecuzione musicale.
+--
+Questa parte e' visibile dalla sezione CHORDS & STYLES
