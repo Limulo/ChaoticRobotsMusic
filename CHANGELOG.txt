@@ -1,0 +1,12 @@
+CHANGELOG
+
+# TODO ################################################
+- inserire una sistema per cui l'arrangiamento del brano non è determinato a priori ma è generato in tempo reale da qualche parametro dipendente dai robot;
+- inserire un controllo sulla posizione dei robot per individuare i punti di scontro tra uno e l'altro per poi sfruttare questi momenti come espediente per migliorare l'arrangiamento del brano (momenti di muteall, etc…);
+
+
+# v 1.0 ###############################################
+commit iniziale 28/05/2014
+- migliorato il 'singer' inserendo un metodo migliore per generare la nota successiva su base di un calcolo probabilistico migliore e rispettoso dell'armonia. La generazione della nota e' inoltre dipendente da un parametro esterno, legato al movimento del robot;
+- inserito un controllo di volume master;
+- inseriti i controlli di 'pan' per tutti e 4 gli strumenti controllati dai robot;
