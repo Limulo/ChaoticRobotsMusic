@@ -3,6 +3,7 @@ CHANGELOG
 # TODO ################################################
 - inserire una sistema per cui l'arrangiamento del brano non è determinato a priori ma è generato in tempo reale da qualche parametro dipendente dai robot;
 - inserire un controllo sulla posizione dei robot per individuare i punti di scontro tra uno e l'altro per poi sfruttare questi momenti come espediente per migliorare l'arrangiamento del brano (momenti di muteall, etc…);
+- inserire un sistema per cui ci sia meno probabilità' di suonare la stessa nota. Per poter risolvere il problema si potrebbe evitare di includere l'intonazione uguale nella direzione prescelta.
 
 
 # v 1.0 ###############################################
