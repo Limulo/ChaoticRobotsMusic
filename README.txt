@@ -58,8 +58,11 @@ Lo spazio di gioco dei robot e' suddiviso virtualmente in 4 riquadri. La posizio
 Questa parte e' visibile dalla sezione CHORDS & STYLES
 
 SYNTH CHIMES1 e SYNTH CHIMES2
+Questi due sintetizzatori monofonici sono associati ai primi due robot. Si occupano di eseguire le note della pentatonica di Do eseguendo le 5 note della scala in direzione ascendente o discendente a seconda della direzione del robot. Talvolta le note vengono eseguite molto rapidamente a mo' di trillo/glissando.
 
 SYNTH PROPH (arpeggiatore)
+Questo sintetizzatore esegue l'arpeggio sulle note dell'accordo attuale. L'ordine in cui le note si susseguono e' legato alla direzione di movimento del robot.
+Un ulteriore parametro di sintesi è il filtro dinamico applicato al suono del synth. Questo filtro si chiude, lasciando passare le frequenze più' gravi, quando il robot si muove nelle zone periferiche dell'area di gioco. il filtro invece si apre, rendendo il suono più' chiaro e brillante, se il robot si avvicina alla parte centrale del piano di gioco.
 
 SYNTH SINGER (con dispositivo automatico di scelta della nota da cantare)
 Questo synth implementa un sistema intelligente per scegliere autonomamente la nota che debba seguire quella attualmente in riproduzione su base dei seguenti elementi:

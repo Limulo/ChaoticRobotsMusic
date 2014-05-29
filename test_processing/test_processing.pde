@@ -1,3 +1,10 @@
+// ISTRUZIONI
+// PREMI:
+// 1, 2, 3 o 4 - per visualizzare la traiettoria del singolo robot ;
+// C - per visualizzare sa suddivisione del piano in 4 quadranti ;
+// M - per visualizzare la media aritmetica delle posizioni dei 4 robot ;
+// Premi un qualsiasi altro tasto per tornare in condizioni normali .
+
 import oscP5.*;
 import netP5.*;
 
@@ -29,6 +36,15 @@ void setup() {
   for(int i = 0; i < NUM_ROBOTS; i++) {
     robots[i]= new Robot(i);
   }
+  
+  // ISTRUZIONI
+  println("PREMI:");
+  println("1, 2, 3 o 4 - per visualizzare la traiettoria del singolo robot ;");
+  println("C - per visualizzare sa suddivisione del piano in 4 quadranti ;");
+  println("M - per visualizzare la media aritmetica delle posizioni dei 4 robot ;");
+  println("premi un qualsiasi altro tasto per tornare in condizioni normali .");
+  
+  
 }
 
 
