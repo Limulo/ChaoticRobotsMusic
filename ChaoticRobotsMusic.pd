@@ -1,4 +1,4 @@
-#N canvas 410 312 622 284 10;
+#N canvas 411 26 622 281 10;
 #X declare -lib mrpeach;
 #N canvas 281 101 565 292 osc_management 0;
 #X obj 10 10 cnv 15 100 100 empty empty OSC 15 12 0 14 -261234 -66577
@@ -53,7 +53,7 @@
 #X obj 75 159 / 2;
 #X obj 119 211 <;
 #X obj 134 160 / 2;
-#X obj 60 233 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 60 233 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
 #X obj 119 233 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
@@ -67,7 +67,7 @@
 1;
 #X obj 16 189 swap 1;
 #X obj 16 211 -;
-#X obj 16 233 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 16 233 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X obj 168 290 &&;
 #X obj 168 266 t b a;
@@ -87,9 +87,9 @@
 #X obj 300 100 cnv 15 200 100 empty empty chords_&_style 5 12 0 14
 -233017 -66577 0;
 #X obj 324 133 tgl 20 0 empty empty empty 17 7 0 10 -262144 -258113
--1 0 1;
-#X obj 354 133 tgl 20 0 empty empty empty 17 7 0 10 -262144 -258113
 -1 1 1;
+#X obj 354 133 tgl 20 0 empty empty empty 17 7 0 10 -262144 -258113
+-1 0 1;
 #X obj 324 163 tgl 20 0 empty empty empty 17 7 0 10 -262144 -258113
 -1 0 1;
 #X obj 354 163 tgl 20 0 empty empty empty 17 7 0 10 -262144 -258113
@@ -120,9 +120,9 @@
 #X obj 160 540 s \$0-arpeggiator;
 #X obj 160 514 list trim;
 #X obj 160 486 list split 1;
-#X obj 17 339 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 17 339 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
-#X obj 39 339 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 39 339 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X obj 17 360 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
@@ -136,7 +136,7 @@
 #X obj 50 486 list split 1;
 #X obj 50 540 s \$0-singer;
 #X obj 393 153 hradio 15 1 0 6 empty empty rythm_style 0 -8 0 10 -262144
--1 -1 1;
+-1 -1 4;
 #X obj 393 253 s \$0-selected-style;
 #X obj 403 50 r \$0-change-style;
 #X obj 324 52 t b b;
@@ -263,7 +263,7 @@
 #X floatatom 214 318 5 0 0 2 vel_x - -;
 #X floatatom 250 318 5 0 0 2 vel_y - -;
 #X obj 297 319 hradio 15 1 0 3 empty empty direzione 0 -8 0 10 -262144
--1 -1 1;
+-1 -1 2;
 #X obj 297 283 i;
 #X obj 140 259 routeOSC /pos /vel /dir;
 #X obj 372 284 unpack;
@@ -273,7 +273,7 @@
 #X floatatom 446 319 5 0 0 2 vel_x - -;
 #X floatatom 482 319 5 0 0 2 vel_y - -;
 #X obj 529 320 hradio 15 1 0 3 empty empty direzione 0 -8 0 10 -262144
--1 -1 1;
+-1 -1 2;
 #X obj 519 284 i;
 #X obj 372 260 routeOSC /pos /vel /dir;
 #X obj 633 284 unpack;
@@ -283,7 +283,7 @@
 #X floatatom 707 319 5 0 0 2 vel_x - -;
 #X floatatom 743 319 5 0 0 2 vel_y - -;
 #X obj 790 320 hradio 15 1 0 3 empty empty direzione 0 -8 0 10 -262144
--1 -1 1;
+-1 -1 2;
 #X obj 790 284 i;
 #X obj 633 260 routeOSC /pos /vel /dir;
 #X obj 893 283 unpack;
@@ -293,7 +293,7 @@
 #X floatatom 967 318 5 0 0 2 vel_x - -;
 #X floatatom 1003 318 5 0 0 2 vel_y - -;
 #X obj 1050 319 hradio 15 1 0 3 empty empty direzione 0 -8 0 10 -262144
--1 -1 0;
+-1 -1 1;
 #X obj 1050 283 i;
 #X obj 893 259 routeOSC /pos /vel /dir;
 #N canvas 444 92 440 359 media 0;
@@ -916,7 +916,7 @@
 #N canvas 618 233 570 239 selectstyle____________________________________
 0;
 #X obj 100 28 hradio 15 1 0 8 empty empty empty 0 -8 0 10 -262144 -1
--1 1;
+-1 4;
 #X obj 40 86 sel 0;
 #X msg 40 107 1;
 #X msg 72 107 0;
@@ -925,7 +925,7 @@
 #X obj 100 48 f;
 #X msg 100 107 1;
 #X msg 132 107 0;
-#X obj 100 130 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 100 130 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X msg 160 107 1;
 #X msg 192 107 0;
@@ -937,7 +937,7 @@
 1;
 #X msg 290 107 1;
 #X msg 322 107 0;
-#X obj 290 130 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 290 130 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
 #X msg 350 107 1;
 #X msg 382 107 0;
@@ -1220,7 +1220,7 @@ per la 3a dall'uscita corrispondente alla terza minore;
 #X obj 288 50 vsl 15 100 0 1 0 0 empty \$0-vol-bass bass 0 -9 0 10
 -260097 -1 -1 7326 1;
 #X obj 77 49 vsl 15 100 0 1 0 0 empty \$0-vol-chimes2 R1 0 -9 0 10
--257985 -1 -1 3400 1;
+-257985 -1 -1 4950 1;
 #N canvas 467 79 751 452 chimes1 0;
 #N canvas 617 22 476 716 note 0;
 #X obj 19 440 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
@@ -1634,7 +1634,7 @@ them in a wavetable for use later.;
 #X obj 284 346 *~;
 #X obj 260 18 inlet control2;
 #X obj 263 84 hsl 100 15 0 1 0 0 empty empty Pan -2 -8 0 10 -4032 -1
--1 99 1;
+-1 5841 1;
 #X obj 327 126 line;
 #X obj 260 104 swap 1;
 #X obj 260 126 -;
@@ -1698,9 +1698,9 @@ them in a wavetable for use later.;
 #X connect 39 0 28 0;
 #X restore 9 422 pd chimes1;
 #X obj 126 49 vsl 15 100 0 1 0 0 empty \$0-vol-proph R2 0 -9 0 10 -257985
--1 -1 4000 1;
+-1 -1 1683 1;
 #X obj 25 49 vsl 15 100 0 1 0 0 empty \$0-vol-chimes1 R0 0 -9 0 10
--257985 -1 -1 3700 1;
+-257985 -1 -1 3960 1;
 #X obj 86 282 r \$0-robot1-dir;
 #X obj 310 138 tgl 15 0 empty \$0-mute-bass empty 17 7 0 10 -262144
 -1 -1 1 1;
@@ -1715,7 +1715,7 @@ them in a wavetable for use later.;
 #X obj 155 326 r \$0-robot2-norm-y;
 #X obj 170 349 r \$0-robot2-norm-x;
 #X obj 508 50 vsl 15 100 0 1 0 0 empty \$0-vol-rev rev 0 -9 0 10 -203904
--1 -1 6980 1;
+-1 -1 1980 1;
 #X obj 531 138 tgl 15 0 empty \$0-mute-rev empty 17 7 0 10 -262144
 -1 -1 1 1;
 #N canvas 248 22 815 696 reverb 0;
@@ -1776,7 +1776,7 @@ them in a wavetable for use later.;
 #X floatatom 127 203 5 0 0 0 - - -;
 #X floatatom 236 204 5 0 0 0 - - -;
 #X floatatom 288 205 5 0 0 0 - - -;
-#N canvas 521 109 714 627 singer 0;
+#N canvas 521 108 714 627 singer 0;
 #N canvas 57 25 1157 740 fraseggiatore 0;
 #X obj 17 -18 r \$0-croma-n;
 #X floatatom 17 3 5 0 0 0 - - -;
@@ -2254,22 +2254,22 @@ them in a wavetable for use later.;
 #X restore 29 92 pd fraseggiatore;
 #X obj 16 144 mtof;
 #X obj 424 407 *~;
-#X msg 513 139 \$1 50;
-#X obj 513 161 line~;
+#X msg 513 368 \$1 50;
+#X obj 513 390 line~;
 #X obj 513 12 inlet volume;
-#X obj 598 160 line~;
+#X obj 598 434 line~;
 #X obj 598 12 inlet MUTE;
-#X msg 598 138 \$1 3000;
-#X obj 424 431 *~;
+#X msg 598 412 \$1 3000;
+#X obj 424 451 *~;
 #X obj 133 65 hradio 15 1 0 3 empty empty direction 0 -8 0 10 -262144
--1 -1 0;
+-1 -1 1;
 #X obj 16 65 hradio 15 1 0 4 empty empty chords 0 -8 0 10 -262144 -1
--1 1;
+-1 0;
 #N canvas 250 58 885 649 fraseggiatore_new 0;
 #N canvas 390 22 685 632 pTOT--------------------- 0;
 #N canvas 248 121 348 548 pA---------------------- 0;
 #X floatatom 22 398 5 0 0 0 - - -;
-#X msg 22 333 0.104 0.16 0.104 0.104 0.16 0.104 0.16;
+#X msg 22 333 0.16 0.104 0.16 0.104 0.16 0.104 0.104;
 #X floatatom 125 13 5 0 1 2 PA - -;
 #X obj 162 102 swap 1;
 #X obj 162 126 -;
@@ -2280,20 +2280,20 @@ them in a wavetable for use later.;
 #X obj 110 85 t f f;
 #X msg 22 312 set \$1 \$2 \$1 \$2 \$1 \$2 \$2;
 #X obj 22 13 hradio 15 1 0 4 empty empty chords 0 -8 0 10 -262144 -1
--1 1;
+-1 0;
 #X msg 79 252 set \$2 \$1 \$2 \$1 \$2 \$1 \$2;
 #X msg 41 292 set \$2 \$1 \$2 \$2 \$1 \$2 \$1;
 #X msg 60 272 set \$1 \$2 \$2 \$1 \$2 \$1 \$2;
 #N canvas 398 159 486 248 switch4 0;
 #X obj 243 4 inlet selectout;
 #X obj 13 21 inlet toberouted;
-#X obj 46 147 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 46 147 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
 #X obj 13 168 spigot;
 #X obj 243 57 sel 0 1 2 3;
 #X msg 46 122 0;
 #X msg 76 122 1;
-#X obj 146 147 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 146 147 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X obj 113 168 spigot;
 #X msg 146 122 0;
@@ -2417,7 +2417,7 @@ them in a wavetable for use later.;
 #X obj 262 523 outlet pA6;
 #X obj 346 -28 inlet pDIR;
 #X obj 23 12 hradio 15 1 0 3 empty empty direction 0 -8 0 10 -262144
--1 -1 0;
+-1 -1 1;
 #X floatatom 205 183 5 0 0 2 gravi - -;
 #X obj 255 124 swap 7;
 #X obj 255 146 -;
@@ -2448,21 +2448,21 @@ them in a wavetable for use later.;
 #X obj 9 13 inlet dir;
 #X obj 94 13 inlet notegravi;
 #X obj 234 13 inlet noteacute;
-#X obj 48 113 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 48 113 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X obj 149 245 outlet allineate;
 #X obj 289 245 outlet nonallineate;
 #X obj 79 203 spigot;
-#X obj 112 181 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 112 181 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
 #X obj 219 203 spigot;
-#X obj 252 181 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 252 181 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
 #X obj 149 203 spigot;
-#X obj 182 181 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 182 181 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X obj 289 203 spigot;
-#X obj 322 181 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 322 181 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X obj 48 86 < 0;
 #X msg 79 156 1;
@@ -2522,7 +2522,7 @@ them in a wavetable for use later.;
 #X restore 192 216 pd allineate_o_no;
 #X obj 241 84 f;
 #X obj 220 12 hradio 15 1 0 7 empty empty in_quale_nota_sono 0 -8 0
-10 -262144 -1 -1 2;
+10 -262144 -1 -1 4;
 #X obj 58 119 until;
 #X msg 58 97 7;
 #X obj 58 143 i;
@@ -2740,13 +2740,13 @@ them in a wavetable for use later.;
 #X connect 58 6 6 0;
 #X restore 325 117 pd pDIR--------------------;
 #X obj 325 85 hradio 15 1 0 3 empty empty direction 0 -8 0 10 -262144
--1 -1 0;
+-1 -1 1;
 #X floatatom 521 85 5 0 1 2 pDIR - -;
 #X obj 404 85 hradio 15 1 0 7 empty empty in_quale_nota_sono 0 -8 0
-10 -262144 -1 -1 2;
+10 -262144 -1 -1 4;
 #X floatatom 204 84 5 0 1 2 PA - -;
 #X obj 45 84 hradio 15 1 0 4 empty empty chords 0 -8 0 10 -262144 -1
--1 1;
+-1 0;
 #X floatatom 45 152 5 0 0 0 - - -;
 #X floatatom 85 152 5 0 0 0 - - -;
 #X floatatom 125 152 5 0 0 0 - - -;
@@ -2976,13 +2976,13 @@ them in a wavetable for use later.;
 #X connect 100 0 99 0;
 #X restore 165 236 pd pTOT---------------------;
 #X obj 213 97 hradio 15 1 0 3 empty empty direction 0 -8 0 10 -262144
--1 -1 0;
+-1 -1 1;
 #X floatatom 300 199 5 0 1 2 pDIR - -;
 #X obj 246 163 hradio 15 1 0 7 empty empty in_quale_nota_sono 0 -8
-0 10 -262144 -1 -1 0;
+0 10 -262144 -1 -1 4;
 #X floatatom 262 199 5 0 1 2 PA - -;
 #X obj 180 67 hradio 15 1 0 4 empty empty chords 0 -8 0 10 -262144
--1 -1 1;
+-1 -1 0;
 #X obj 231 188 f;
 #X obj 198 188 f;
 #X obj 165 188 f;
@@ -3356,10 +3356,10 @@ them in a wavetable for use later.;
 #X obj 133 12 inlet controllo1;
 #X obj 16 34 - 1;
 #X obj 16 12 r \$0-singer;
-#X obj 427 494 throw~ mono;
+#X obj 427 534 throw~ mono;
 #X obj 399 12 inlet controllo2;
 #X obj 402 78 hsl 100 15 0 1 0 0 empty empty Pan -2 -8 0 10 -4032 -1
--1 3465 1;
+-1 2029 1;
 #X obj 466 120 line;
 #X obj 399 98 swap 1;
 #X obj 399 120 -;
@@ -3369,11 +3369,11 @@ them in a wavetable for use later.;
 #X obj 466 163 sqrt;
 #X obj 399 185 sig~;
 #X obj 466 185 sig~;
-#X obj 384 459 *~;
-#X obj 451 459 *~;
+#X obj 384 499 *~;
+#X obj 451 499 *~;
 #X msg 466 98 \$1 100;
-#X obj 503 494 throw~ right;
-#X obj 333 494 throw~ left;
+#X obj 503 534 throw~ right;
+#X obj 333 534 throw~ left;
 #N canvas 336 156 456 489 singer-vocali 0;
 #X obj 102 13 inlet midi-note;
 #X obj 23 434 outlet~ audio;
@@ -3536,14 +3536,16 @@ them in a wavetable for use later.;
 #X msg 240 65 60 30 80 350;
 #X obj 240 88 unpack 1 2 3 4;
 #X obj 240 41 loadbang;
-#X obj 16 494 throw~ fx1;
-#X obj 16 463 *~ 0.2;
+#X obj 16 534 throw~ fx1;
+#X obj 16 451 *~;
+#X obj 16 423 *~ 0.4;
 #X connect 1 0 33 0;
 #X connect 2 0 9 0;
 #X connect 3 0 4 0;
 #X connect 4 0 2 1;
 #X connect 5 0 3 0;
 #X connect 6 0 9 1;
+#X connect 6 0 46 1;
 #X connect 7 0 8 0;
 #X connect 8 0 6 0;
 #X connect 9 0 29 0;
@@ -3580,7 +3582,7 @@ them in a wavetable for use later.;
 #X connect 38 0 35 4;
 #X connect 39 0 35 5;
 #X connect 41 0 2 0;
-#X connect 41 0 46 0;
+#X connect 41 0 47 0;
 #X connect 42 0 43 0;
 #X connect 43 0 36 0;
 #X connect 43 1 37 0;
@@ -3588,15 +3590,16 @@ them in a wavetable for use later.;
 #X connect 43 3 39 0;
 #X connect 44 0 42 0;
 #X connect 46 0 45 0;
+#X connect 47 0 46 0;
 #X restore 215 422 pd singer;
 #X obj 178 49 vsl 15 100 0 1 0 0 empty \$0-vol-singer R3 0 -9 0 10
--257985 -1 -1 6088 1;
+-257985 -1 -1 4950 1;
 #X obj 199 222 tgl 15 0 empty \$0-mute-singer empty 17 7 0 10 -262144
 -1 -1 1 1;
 #X floatatom 178 204 5 0 0 0 - - -;
 #X floatatom 508 205 5 0 0 0 - - -;
 #X obj 9 242 r \$0-robot0-dir;
-#N canvas 0 28 875 494 drums 0;
+#N canvas 124 22 891 514 drums 0;
 #X obj 15 11 r \$0-croma-n;
 #X obj 15 386 *~;
 #N canvas 56 231 448 470 kicknsnr 0;
@@ -3685,7 +3688,7 @@ them in a wavetable for use later.;
 #X msg 15 238 300 130;
 #X obj 15 37 mod 16;
 #X obj 78 386 *~;
-#X obj 15 450 throw~ mono;
+#X obj 15 470 throw~ mono;
 #X msg 89 238 500 600 1 0.2;
 #X obj 317 160 select 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15;
 #X obj 15 159 select 3 4 7 8 10 12 15;
@@ -3694,7 +3697,7 @@ them in a wavetable for use later.;
 #N canvas 618 233 570 239 selectstyle____________________________________
 0;
 #X obj 100 28 hradio 15 1 0 8 empty empty empty 0 -8 0 10 -262144 -1
--1 1;
+-1 4;
 #X obj 40 86 sel 0;
 #X msg 40 107 1;
 #X msg 72 107 0;
@@ -3703,7 +3706,7 @@ them in a wavetable for use later.;
 #X obj 100 48 f;
 #X msg 100 107 1;
 #X msg 132 107 0;
-#X obj 100 130 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 100 130 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X msg 160 107 1;
 #X msg 192 107 0;
@@ -3715,7 +3718,7 @@ them in a wavetable for use later.;
 1;
 #X msg 290 107 1;
 #X msg 322 107 0;
-#X obj 290 130 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 290 130 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
 #X msg 350 107 1;
 #X msg 382 107 0;
@@ -3978,9 +3981,11 @@ them in a wavetable for use later.;
 #X obj 493 350 f;
 #X obj 613 350 f;
 #X obj 743 350 f;
-#X obj 145 425 *~ 0.7;
-#X obj 146 450 throw~ fx1;
+#X obj 285 345 *~ 0.7;
+#X obj 285 470 throw~ fx1;
 #X obj 146 397 *~ 0.5;
+#X obj 285 436 *~;
+#X obj 146 436 *~;
 #X connect 0 0 8 0;
 #X connect 1 0 30 0;
 #X connect 2 0 1 0;
@@ -4057,10 +4062,14 @@ them in a wavetable for use later.;
 #X connect 35 0 38 0;
 #X connect 36 0 1 1;
 #X connect 37 0 9 1;
+#X connect 37 0 43 1;
 #X connect 38 0 19 1;
-#X connect 39 0 40 0;
-#X connect 41 0 40 0;
-#X coords 0 504 1 503 150 100 0;
+#X connect 38 0 42 1;
+#X connect 39 0 42 0;
+#X connect 41 0 43 0;
+#X connect 42 0 40 0;
+#X connect 43 0 40 0;
+#X coords 0 514 1 513 150 100 0;
 #X restore 422 421 pd drums;
 #X obj 348 50 vsl 15 100 0 1 0 0 empty \$0-vol-kick kick 0 -9 0 10
 -204786 -1 -1 9900 1;
@@ -4492,7 +4501,7 @@ them in a wavetable for use later.;
 #X obj 337 356 *~;
 #X obj 315 18 inlet control2;
 #X obj 318 84 hsl 100 15 0 1 0 0 empty empty Pan -2 -8 0 10 -4032 -1
--1 9702 1;
+-1 8786 1;
 #X obj 382 126 line;
 #X obj 315 104 swap 1;
 #X obj 315 126 -;
@@ -4593,10 +4602,10 @@ them in a wavetable for use later.;
 #X floatatom 622 433 5 0 0 0 - - -;
 #X obj 692 324 mod 4;
 #X obj 622 301 spigot;
-#X obj 655 277 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 655 277 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
 #X obj 692 301 spigot;
-#X obj 725 277 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 725 277 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X obj 757 301 spigot;
 #X obj 790 277 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
@@ -4610,7 +4619,7 @@ them in a wavetable for use later.;
 #X obj 776 144 t f b;
 #X msg 766 171 1;
 #X obj 731 55 vradio 15 1 0 4 empty empty empty 0 -8 0 10 -262144 -1
--1 2;
+-1 1;
 #X floatatom 776 204 5 0 0 0 - - -;
 #X text 752 54 on/off;
 #X text 753 68 up;
@@ -4858,9 +4867,9 @@ per la 3a dall'uscita corrispondente alla terza minore;
 #X floatatom 55 125 5 0 0 1 differenza - -;
 #X obj 89 196 > 0;
 #X obj 154 196 <= 0;
-#X obj 89 221 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 89 221 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
-#X obj 154 221 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 154 221 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
 #X obj 28 21 inlet;
 #X obj 55 344 outlet;
@@ -4869,7 +4878,7 @@ per la 3a dall'uscita corrispondente alla terza minore;
 #X obj 55 245 spigot;
 #X obj 121 245 spigot;
 #X obj 55 306 vradio 15 1 0 2 empty empty empty 0 -8 0 10 -262144 -1
--1 1;
+-1 0;
 #X msg 55 221 1;
 #X msg 121 221 0;
 #X connect 0 0 1 0;
@@ -4896,7 +4905,7 @@ per la 3a dall'uscita corrispondente alla terza minore;
 #X connect 18 0 15 0;
 #X restore 553 85 pd updown;
 #X obj 553 110 vradio 15 1 0 2 empty empty empty 0 -8 0 10 -262144
--1 -1 1;
+-1 -1 0;
 #X text 574 108 up;
 #X text 574 123 down;
 #X obj 553 147 + 1;
@@ -4934,9 +4943,9 @@ per la 3a dall'uscita corrispondente alla terza minore;
 #X msg 717 221 \$1 3000;
 #X obj 537 342 *~;
 #X obj 164 118 hsl 100 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 644 1;
+-1 -1 4601 1;
 #X obj 277 118 hsl 100 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 9256 1;
+-1 -1 5299 1;
 #X floatatom 309 139 5 0 0 0 - - -;
 #X floatatom 208 139 5 0 0 0 - - -;
 #X msg 160 186 \$1 50;
@@ -4997,7 +5006,7 @@ piu' l'uscita si avvicinera' ad 1;
 #X connect 22 0 12 0;
 #X restore 160 66 pd filter-control;
 #X obj 393 118 hsl 100 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 9256 1;
+-1 -1 5299 1;
 #X floatatom 438 139 5 0 0 0 - - -;
 #X msg 390 186 \$1 50;
 #X obj 390 208 line~;
@@ -5148,7 +5157,7 @@ piu' l'uscita si avvicinera' ad 1;
 #X connect 55 0 53 0;
 #X restore 17 149 pd suono7poly;
 #X obj 512 81 hsl 100 15 0 1 0 0 empty empty Pan -2 -8 0 10 -4032 -1
--1 9801 1;
+-1 421 1;
 #X obj 576 123 line;
 #X obj 509 101 swap 1;
 #X obj 509 123 -;
@@ -5247,6 +5256,9 @@ piu' l'uscita si avvicinera' ad 1;
 #X obj 28 262 r \$0-robot0-norm-x;
 #X obj 98 303 r \$0-robot1-norm-x;
 #X obj 232 396 r \$0-robot3-norm-x;
+#X text 24 160 Limulo.net 2014 : tanks to Miller Puckette and Andy
+Farnell;
+#X text 461 14 ChaoticRobotsMusic_v1.0;
 #X connect 2 0 1 0;
 #X connect 2 0 23 0;
 #X connect 4 0 3 0;
@@ -5307,7 +5319,7 @@ piu' l'uscita si avvicinera' ad 1;
 #X connect 64 0 41 1;
 #X connect 65 0 25 1;
 #X coords 0 -1 1 1 613 170 2 10 10;
-#X restore 5 108 pd pannello-mixer;
+#X restore 5 107 pd pannello-mixer;
 #N canvas 261 403 258 176 robot-arena 0;
 #X obj 10 10 cnv 15 100 100 empty empty AREA 20 12 0 14 -261234 -66577
 0;
@@ -5447,7 +5459,7 @@ piu' l'uscita si avvicinera' ad 1;
 #X connect 29 0 31 0;
 #X connect 31 0 30 0;
 #X restore 217 56 pd score-generator;
-#N canvas 63 226 1152 277 mix-presets 0;
+#N canvas 67 446 1152 277 mix-presets 0;
 #X floatatom 54 186 5 0 0 0 - - -;
 #X obj 14 236 s \$0-vol-pads;
 #X floatatom 14 186 5 0 0 0 - - -;
@@ -5500,8 +5512,6 @@ singer rev;
 1;
 #X msg 633 126 chimes1 1 \, chimes2 1 \, proph 1 \, singer 1;
 #X msg 633 104 chimes1 0 \, chimes2 0 \, proph 0 \, singer 0;
-#X msg 617 80 pads 0 \, bass 0 \, kick 0 \, snare 0 \, tamb 0 \, rev
-0;
 #X floatatom 226 186 5 0 0 0 - - -;
 #X obj 246 216 s \$0-vol-singer;
 #X obj 345 216 s \$0-vol-kick;
@@ -5510,13 +5520,14 @@ singer rev;
 #X floatatom 426 186 5 0 0 0 - - -;
 #X floatatom 326 186 5 0 0 0 - - -;
 #X floatatom 376 186 5 0 0 0 - - -;
-#X msg 14 82 pads 0.36 \, bass 0.74 \, proph 0.17 \, chimes1 0.4 \,
-chimes2 0.5 \, singer 0.12 \, rev 0.2 \, kick 1 \, snare 1 \, tamb
-1 \, master 1 \;;
 #X obj 14 122 route pads bass proph chimes1 chimes2 singer rev kick
 snare tamb master;
 #X obj 481 236 s \$0-vol-master;
 #X floatatom 476 186 5 0 0 0 - - -;
+#X msg 14 82 pads 0.36 \, bass 0.74 \, proph 0.17 \, chimes1 0.4 \,
+chimes2 0.5 \, singer 0.5 \, rev 0.2 \, kick 1 \, snare 1 \, tamb 1
+\, master 1 \;;
+#X msg 617 80 pads 0 \, bass 0 \, kick 0 \, snare 0 \, tamb 0;
 #X connect 0 0 7 0;
 #X connect 2 0 1 0;
 #X connect 3 0 9 0;
@@ -5545,29 +5556,29 @@ snare tamb master;
 #X connect 32 0 33 0;
 #X connect 34 0 35 0;
 #X connect 35 0 37 0;
-#X connect 35 1 40 0;
-#X connect 36 0 49 0;
+#X connect 35 1 52 0;
+#X connect 36 0 51 0;
 #X connect 37 0 31 0;
 #X connect 38 0 31 0;
 #X connect 39 0 31 0;
-#X connect 40 0 31 0;
-#X connect 41 0 42 0;
-#X connect 46 0 45 0;
+#X connect 40 0 41 0;
+#X connect 45 0 44 0;
+#X connect 46 0 42 0;
 #X connect 47 0 43 0;
-#X connect 48 0 44 0;
-#X connect 49 0 50 0;
-#X connect 50 0 2 0;
-#X connect 50 1 0 0;
-#X connect 50 2 4 0;
-#X connect 50 3 3 0;
-#X connect 50 4 6 0;
-#X connect 50 5 41 0;
-#X connect 50 6 5 0;
-#X connect 50 7 47 0;
-#X connect 50 8 48 0;
-#X connect 50 9 46 0;
-#X connect 50 10 52 0;
-#X connect 52 0 51 0;
+#X connect 48 0 2 0;
+#X connect 48 1 0 0;
+#X connect 48 2 4 0;
+#X connect 48 3 3 0;
+#X connect 48 4 6 0;
+#X connect 48 5 40 0;
+#X connect 48 6 5 0;
+#X connect 48 7 46 0;
+#X connect 48 8 47 0;
+#X connect 48 9 45 0;
+#X connect 48 10 50 0;
+#X connect 50 0 49 0;
+#X connect 51 0 48 0;
+#X connect 52 0 31 0;
 #X restore 217 33 pd mix-presets;
 #X obj 10 10 cnv 15 100 100 empty empty MASTER 10 12 0 14 -232576 -66577
 0;
@@ -5583,5 +5594,3 @@ snare tamb master;
 #X connect 8 0 4 0;
 #X coords 0 -1 1 1 100 100 2 10 10;
 #X restore 518 4 pd master;
-#X text 19 259 Limulo.net 2014 : tanks to Miller Puckette and Andy
-Farnell;
