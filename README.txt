@@ -23,6 +23,41 @@ L'arrangiamento musicale finale sara' caratterizzato dalla presenza di una sezio
 Un sintetizzatore polifonico-stereo si occupa di sostenere l'armonia eseguendo le note dell'accordo.
 Ci sono poi ulteriori sintetizzatore monofonici i cui parametri di sintesi sono dipendenti dal movimento dei robot.
 
+
+ISTRUZIONI
+==========
+Per poter far funzionare l'applicativo sul proprio computer, non potendo disporre dei robot e del sistema di telecamera per la ripresa del loro movimento, e' possibile sfruttare una applicazione scritta in linguaggio 'Processing'. Questa applicazione di test ha il compito di simulare il movimento dei robot e di inviare a 'ChaoticRobotsMusic' gli stessi dati relativi al movimento, come se i robot fossero effettivamente presenti.
+
+Gli strumenti necessari sono 2:
+- PROCESSING, scaricabarile gratuitamente per tutti i sistemi operativi dal sito http://www.processing.org.
+- PURE DATA, versione EXTENDED, scaricabarile dal sito http://http://puredata.info/.
+
+Un ulteriore elemento, indispensabile per permettere la comunicazione tramite messaggi OSC tra le due applicazioni 'test' e 'ChaoticRobotsMusic' e' l'installazione della libreria aggiuntiva per Processing 'oscP5' di Andreas Schlegel. La libreria può' essere scaricata direttamente dall'indirizzo http://www.sojamo.de/libraries/oscP5/ oppure installata direttamente da Processing, selezionando "Import Library…" e quindi cliccando su "Add Library" dal menu' a tendina "Sketch". Così facendo, all'apertura della finestra "Library Manager" basterà' cercare la libreria 'oscP5' nel campo di ricerca apposito e, una volta trovatala, selezionarla e fare click su 'Install'. Per completare il processo sarà' necessario riavviare Processing.
+Ulteriori informazioni sull'installazione delle librerie aggiuntive possono essere reperite alla pagina web http://www.processing.org/reference/libraries/ .
+
+Fatto questo è necessario scaricare il codice sorgente del progetto 'ChaoticRobotsMusic' dal link https://github.com/Limulo/ChaoticRobotsMusic .
+
+Una volta scompattato l'archivio .zip, i file da mandare in esecuzione, con un semplice doppio click, sono:
+- test/test.pde (codice sorgente Processing dell'applicato di test per la simulazione del movimento dei robot);
+- puredata/ChaoticRobotsMusic.pd (codice sorgente PureData per l'applicativo che genera musica e audio procedurale).
+
+Click sul pulsate play/run di Processing (in alto a sinistra) per avviare l'applicativo  test.
+Click sull'interruttore 'Audio_ON' della sezione 'MASTER' in PureData per attivare la riproduzione dell'audio.
+
+
+ISTRUZIONI PER L'APPLICATIVO TEST
+=================================
+
+l'applicativo test permette alcuni rudimentali controlli per visualizzare le traiettorie dei singoli robot, la suddivisione immaginaria del piano di gioco nei 4 quadranti e la posizione della media aritmetica delle coordinate dei 4 robot:
+Premi 1, 2, 3 o 4 - per visualizzare la traiettoria del singolo robot ;
+Premi C - per visualizzare sa suddivisione del piano in 4 quadranti ;
+Premi M - per visualizzare la media aritmetica delle posizioni dei 4 robot ;
+Premi un qualsiasi altro tasto per tornare in condizioni normali .
+
+
+ISTRUZIONI PER L'APPLICATIVO 'CHAOTIC ROBOTS MUSIC'
+===================================================
+
 ANALISI DELLE SEZIONI
 =====================
 
