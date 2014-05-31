@@ -78,15 +78,16 @@ La probabilità' che la nota successiva, anziché' essere una nota, sia invece u
 In maniera simile, una volta che si e' interrotta la frase musicale, la probabilità' che la nota successiva sia effettivamente una nota e non un ulteriore valore di pausa-di-croma è direttamente proporzionale alla durata dell'interruzione.
 
 PADS (polifonico stereofonico)
+Pads e' un sintetizzatore polifonico che ha per compito quello di suonare le note dell'accordo creando una suono persistente e dinamico per sostenere l'esecuzione solista dei robots
 
 BASS
+Sintetizzatore monofonico che si occupa di eseguire la melodia del basso. 
 
-KICK
+KICK, SNARE e TAMB
+I 3 elementi che fanno parte della batteria e, a seconda dello stile musicale prescelto, eseguono un pattern ritmico.
 
-SNARE 
-
-TAMB
-
+REV
+E' un effetto riverbero verso il quale confluiscono le mandate dagli strumenti SINGER, SNARE e TAMB.
 
 
 
